@@ -19,7 +19,6 @@ function App() {
   const [ratings, setRatings] = useState({});
   const [selectedId, setSelectedId] = useState(null);
 
-  // Agrega la película a favoritas si no está, o la quita si ya está
   function toggleFavorite(id) {
     if (favorites.includes(id)) {
       setFavorites(favorites.filter((favoriteId) => favoriteId !== id));
@@ -28,12 +27,11 @@ function App() {
     }
   }
 
-  // Guarda la valoración (de 1 a 5) de una película
+  
   function rateMovie(id, stars) {
     setRatings({ ...ratings, [id]: stars });
   }
 
-  // Aplica el buscador y los filtros al mismo tiempo
   const filteredMovies = movies.filter((movie) => {
     const matchesQuery = movie.title
       .toLowerCase()
@@ -55,10 +53,8 @@ function App() {
     );
   });
 
-  // Películas favoritas, sacadas de los datos a partir de los IDs
   const favoriteMovies = movies.filter((movie) => favorites.includes(movie.id));
 
-  // Película seleccionada (si no hay ninguna, vale undefined)
   const selectedMovie = movies.find((movie) => movie.id === selectedId);
 
   return (
