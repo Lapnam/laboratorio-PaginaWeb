@@ -1,8 +1,6 @@
 function Filters({ movies, filters, onFiltersChange }) {
-  // Lista de géneros sin repetir
   const genres = [...new Set(movies.map((movie) => movie.genre))];
 
-  // Lista de años sin repetir, del más nuevo al más antiguo
   const years = [...new Set(movies.map((movie) => movie.year))].sort(
     (a, b) => b - a
   );

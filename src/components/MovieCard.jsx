@@ -13,7 +13,7 @@ function MovieCard({
         <p>
           {movie.genre} · {movie.year}
         </p>
-        <p>⭐ {movie.rating}</p>
+        <p> {movie.rating}</p>
         <p>{movie.description}</p>
 
         {userRating > 0 && (
@@ -29,7 +29,7 @@ function MovieCard({
             onToggleFavorite(movie.id);
           }}
         >
-          {isFavorite ? "♥ Quitar de favoritas" : "♡ Agregar a favoritas"}
+          {isFavorite ? " Quitar de favoritas" : " Agregar a favoritas"}
         </button>
       </div>
     </div>
