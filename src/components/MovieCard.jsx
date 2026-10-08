@@ -7,14 +7,20 @@ function MovieCard({
 }) {
   return (
     <div className="movie-card" onClick={() => onSelect(movie.id)}>
-      <img src={movie.image} alt={movie.title} />
+      <div className="movie-card-poster">
+        <img src={movie.image} alt={movie.title} />
+        <span className="movie-card-badge"> {movie.rating}</span>
+      </div>
+
       <div className="movie-card-info">
         <h3>{movie.title}</h3>
-        <p>
-          {movie.genre} · {movie.year}
-        </p>
-        <p> {movie.rating}</p>
-        <p>{movie.description}</p>
+
+        <div className="movie-card-meta">
+          <span className="movie-card-genre">{movie.genre}</span>
+          <span>{movie.year}</span>
+        </div>
+
+        <p className="movie-card-description">{movie.description}</p>
 
         {userRating > 0 && (
           <p className="user-rating">

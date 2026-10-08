@@ -13,7 +13,7 @@ function Filters({ movies, filters, onFiltersChange }) {
           onFiltersChange({ ...filters, genre: event.target.value })
         }
       >
-        <option value="all">Todos los géneros</option>
+        <option value="all">Géneros</option>
         {genres.map((genre) => (
           <option key={genre} value={genre}>
             {genre}
@@ -27,7 +27,7 @@ function Filters({ movies, filters, onFiltersChange }) {
           onFiltersChange({ ...filters, year: event.target.value })
         }
       >
-        <option value="all">Todos los años</option>
+        <option value="all">Año</option>
         {years.map((year) => (
           <option key={year} value={year}>
             {year}
@@ -44,7 +44,7 @@ function Filters({ movies, filters, onFiltersChange }) {
           })
         }
       >
-        <option value={0}>Cualquier calificación</option>
+        <option value={0}>Calificación</option>
         <option value={7}>7 o más</option>
         <option value={8}>8 o más</option>
         <option value={9}>9 o más</option>
@@ -58,7 +58,7 @@ function Filters({ movies, filters, onFiltersChange }) {
             onFiltersChange({ ...filters, onlyFavorites: event.target.checked })
           }
         />
-        Solo favoritas
+        Favoritas
       </label>
     </div>
   );

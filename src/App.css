@@ -4,7 +4,6 @@
   padding: 20px;
 }
 
-/* ---------- Encabezado ---------- */
 .header {
   display: flex;
   flex-direction: column;
@@ -39,7 +38,6 @@
   color: var(--color-texto-suave);
 }
 
-/* ---------- Filtros ---------- */
 .filters {
   display: flex;
   flex-wrap: wrap;
@@ -76,7 +74,6 @@
   accent-color: var(--color-acento);
 }
 
-/* ---------- Sección de favoritas ---------- */
 .favorites {
   background-color: var(--color-tarjeta);
   border-left: 4px solid var(--color-acento);
@@ -133,57 +130,107 @@
   color: var(--color-fondo);
 }
 
-/* ---------- Lista de películas ---------- */
 .movie-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 24px;
 }
 
-/* ---------- Tarjeta de película ---------- */
 .movie-card {
+  display: flex;
+  flex-direction: column;
   background-color: var(--color-tarjeta);
-  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
 
 .movie-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
+  border-color: var(--color-acento);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
 
-.movie-card img {
+.movie-card-poster {
+  position: relative;
+  aspect-ratio: 2 / 3;
+}
+
+.movie-card-poster img {
   width: 100%;
-  height: 320px;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
 
+.movie-card-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background-color: rgba(15, 23, 42, 0.85);
+  color: var(--color-acento);
+  font-size: 13px;
+  font-weight: 600;
+}
+
 .movie-card-info {
-  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 16px;
 }
 
 .movie-card-info h3 {
   margin: 0 0 8px 0;
+  font-size: 20px;
 }
 
-.movie-card-info p {
-  margin: 4px 0;
-  font-size: 14px;
+.movie-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 13px;
   color: var(--color-texto-suave);
 }
 
-.movie-card-info .user-rating {
+.movie-card-genre {
+  padding: 2px 10px;
+  border-radius: 999px;
+  background-color: var(--color-acento);
+  color: var(--color-fondo);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.movie-card-description {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-texto-suave);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.user-rating {
+  margin: 0 0 10px 0;
+  font-size: 14px;
   color: var(--color-acento);
 }
 
 .favorite-button {
   width: 100%;
-  margin-top: 10px;
-  padding: 8px;
+  margin-top: auto;
+  padding: 10px;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   background-color: var(--color-campo);
   color: var(--color-texto);
   font-size: 14px;
@@ -195,7 +242,6 @@
   color: var(--color-fondo);
 }
 
-/* ---------- Detalle de película ---------- */
 .detail-overlay {
   position: fixed;
   top: 0;
@@ -265,7 +311,6 @@
   line-height: 1.6;
 }
 
-/* ---------- Estrellas de valoración ---------- */
 .star-rating {
   display: flex;
   gap: 4px;
@@ -284,7 +329,6 @@
   color: var(--color-acento);
 }
 
-/* ---------- Mensaje sin resultados ---------- */
 .no-results {
   text-align: center;
   font-size: 18px;
