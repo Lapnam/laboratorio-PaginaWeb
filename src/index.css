@@ -1,0 +1,37 @@
+:root {
+  /* ---------- Colores (cámbialos aquí) ---------- */
+  --color-fondo: #0f172a;
+  --color-tarjeta: #1e293b;
+  --color-campo: #334155;
+  --color-texto: #f1f5f9;
+  --color-texto-suave: #94a3b8;
+  --color-acento: #f59e0b;
+  --color-acento-oscuro: #d97706;
+
+  /* ---------- Tipografías ---------- */
+  --fuente-texto: "Poppins", Arial, sans-serif;
+  --fuente-titulos: "Playfair Display", Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fuente-texto);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fuente-titulos);
+}
+
+input,
+select,
+button {
+  font-family: inherit;
+}
