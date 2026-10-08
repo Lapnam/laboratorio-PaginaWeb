@@ -1,5 +1,4 @@
 :root {
-  /* ---------- Colores (cámbialos aquí) ---------- */
   --color-fondo: #0f172a;
   --color-tarjeta: #1e293b;
   --color-campo: #334155;
@@ -8,10 +7,10 @@
   --color-acento: #f59e0b;
   --color-acento-oscuro: #d97706;
 
-  /* ---------- Tipografías ---------- */
   --fuente-texto: "Poppins", Arial, sans-serif;
   --fuente-titulos: "Playfair Display", Georgia, serif;
 }
+
 
 * {
   box-sizing: border-box;
