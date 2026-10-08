@@ -7,6 +7,7 @@ function Header({ query, onQueryChange }) {
       <SearchBar query={query} onQueryChange={onQueryChange} />
     </header>
   );
+  
 }
 
 export default Header;

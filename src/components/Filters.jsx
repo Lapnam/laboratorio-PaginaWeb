@@ -10,7 +10,7 @@ function Filters({ movies, filters, onFiltersChange }) {
       <select
         value={filters.genre}
         onChange={(event) =>
-          onFiltersChange({ ...filters, genre: event.target.value })
+          onFiltersChange({ ...filters, genre: event.target.value})
         }
       >
         <option value="all">Géneros</option>
@@ -62,6 +62,7 @@ function Filters({ movies, filters, onFiltersChange }) {
       </label>
     </div>
   );
+  
 }
 
 export default Filters;

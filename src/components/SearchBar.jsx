@@ -8,6 +8,7 @@ function SearchBar({ query, onQueryChange }) {
       onChange={(event) => onQueryChange(event.target.value)}
     />
   );
+  
 }
 
 export default SearchBar;

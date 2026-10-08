@@ -14,6 +14,7 @@ function StarRating({ rating, onRate }) {
       ))}
     </div>
   );
+  
 }
 
 export default StarRating;

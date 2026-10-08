@@ -33,6 +33,7 @@ function MovieDetail({ movie, rating, onRate, onClose }) {
       </div>
     </div>
   );
+  
 }
 
 export default MovieDetail;

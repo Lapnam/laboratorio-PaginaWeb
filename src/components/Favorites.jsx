@@ -24,6 +24,7 @@ function Favorites({ movies, onSelect, onToggleFavorite }) {
       )}
     </section>
   );
+  
 }
 
 export default Favorites;

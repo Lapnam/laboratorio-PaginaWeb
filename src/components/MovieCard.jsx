@@ -4,7 +4,8 @@ function MovieCard({
   userRating,
   onSelect,
   onToggleFavorite,
-}) {
+}) 
+{
   return (
     <div className="movie-card" onClick={() => onSelect(movie.id)}>
       <div className="movie-card-poster">
